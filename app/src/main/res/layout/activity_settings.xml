@@ -15,11 +15,46 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Spinner
-        android:id="@+id/unitsSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:id="@+id/fromUnitsSpinner"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/toUnitsSpinner"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromUnitsSpinner"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="132dp"
+        android:text="From:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="476dp"
+        android:text="To:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

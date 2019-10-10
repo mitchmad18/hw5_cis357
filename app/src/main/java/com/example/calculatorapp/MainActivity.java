@@ -44,6 +44,11 @@ import org.w3c.dom.Text;
             }
         });
 
+        //calculate button
+        calculate.setOnClickListener(v -> {
+
+        });
+
         //clear button
         clear.setOnClickListener(v -> {
             fromTextBox.setText(" ");
@@ -53,14 +58,14 @@ import org.w3c.dom.Text;
         mode.setOnClickListener(v -> {
             if(calculatorMode.equals("length")){
                 calculatorMode = "volume";
-                fromUnits.setText("liters");
-                toUnits.setText("gallons");
+                fromUnits.setText("Liters");
+                toUnits.setText("Gallons");
 
             }
             else {
                 calculatorMode = "length";
-                fromUnits.setText("meters");
-                toUnits.setText("yards");
+                fromUnits.setText("Meters");
+                toUnits.setText("Yards");
             }
         });
 
@@ -73,11 +78,11 @@ import org.w3c.dom.Text;
 
             //set the from units label
             TextView fromUnits = (TextView) findViewById(R.id.fromUnits);
-            fromUnits.setText(data.getStringExtra("unit"));
+            fromUnits.setText(data.getStringExtra("fromUnit"));
 
             //set the to units label
             TextView toUnits = (TextView) findViewById(R.id.toUnits);
-            toUnits.setText(data.getStringExtra("unit"));
+            toUnits.setText(data.getStringExtra("toUnit"));
         }
     }
 }
