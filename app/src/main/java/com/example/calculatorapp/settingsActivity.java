@@ -16,7 +16,6 @@ public class settingsActivity extends AppCompatActivity {
 
     private String toSelection = " ";
     private String fromSelection = " ";
-    private String mode = "length";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +49,10 @@ public class settingsActivity extends AppCompatActivity {
                 R.array.lengthUnits, android.R.layout.simple_spinner_item);
 
         ArrayAdapter<CharSequence> volumeUnits = ArrayAdapter.createFromResource(this,
-                R.array.lengthUnits, android.R.layout.simple_spinner_item);
+                R.array.volumeUnits, android.R.layout.simple_spinner_item);
 
         //populate spinners with the units based on the current mode
-        if(mode == "length"){
+        if(MainActivity.calculatorMode == "length"){
             lengthUnits.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             fromUnitsSpinner.setAdapter(lengthUnits);
             toUnitsSpinner.setAdapter(lengthUnits);

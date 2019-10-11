@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
      public static final int SETTINGS_SELECTION = 1;
 
      //used to hold the current mode of the calculator
-     private String calculatorMode = "length";
+     public static String calculatorMode = "length";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,15 @@ import org.w3c.dom.Text;
         });
 
         //calculate button
-        calculate.setOnClickListener(v -> {
+            calculate.setOnClickListener(v -> {
+                double val;
+
+            if (calculatorMode == "length"){
+
+            }
+            else{
+
+            }
 
         });
 
